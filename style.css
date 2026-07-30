@@ -69,34 +69,6 @@ strong { font-weight: 600; }
 ::-webkit-scrollbar-thumb { background: var(--crimson); border-radius: 2px; }
 
 
-<<<<<<< HEAD
-=======
-/* ────────────────────────────────────────────────────────────────
-   FLOATING ROSE PETALS  (rendered by script.js)
-   ──────────────────────────────────────────────────────────────── */
-.petals-container {
-  position: fixed;
-  inset: 0;
-  pointer-events: none;
-  z-index: 0;
-  overflow: hidden;
-}
-
-.petal {
-  position: absolute;
-  top: -30px;
-  border-radius: 50% 0 50% 0;
-  background: var(--crimson);
-  opacity: 0;
-  animation: petalDrift linear infinite;
-}
-
-@keyframes petalDrift {
-  0%   { transform: translateY(0)      rotate(0deg)   scale(1);   opacity: 0.65; }
-  100% { transform: translateY(105vh)  rotate(540deg) scale(0.2); opacity: 0;    }
-}
-
->>>>>>> c06ba400569f6168e164145d34132d3e037cbd8d
 
 /* ────────────────────────────────────────────────────────────────
    SIDE NAVIGATION DOTS
@@ -186,13 +158,8 @@ strong { font-weight: 600; }
 .section-eyebrow {
   display: block;
   font-family: var(--font-body);
-<<<<<<< HEAD
   font-size: 12px;
   font-weight: 550;
-=======
-  font-size: 10px;
-  font-weight: 500;
->>>>>>> c06ba400569f6168e164145d34132d3e037cbd8d
   letter-spacing: 5px;
   text-transform: uppercase;
   color: var(--crimson);
@@ -202,7 +169,6 @@ strong { font-weight: 600; }
 .section-title {
   font-family: var(--font-display);
   font-size: clamp(2.4rem, 4.5vw, 4.2rem);
-<<<<<<< HEAD
   font-weight: 400;
   font-style: italic;
   color: var(--cream);
@@ -214,16 +180,6 @@ strong { font-weight: 600; }
 .section-subtitle {
   font-family: 'Cormorant Garamond',serif;
   font-size: 1.25rem;
-=======
-  font-weight: 300;
-  color: var(--cream);
-  line-height: 1.1;
-  margin-bottom: 14px;
-}
-
-.section-subtitle {
-  font-size: 0.95rem;
->>>>>>> c06ba400569f6168e164145d34132d3e037cbd8d
   color: var(--cream-dim);
   font-style: italic;
   margin-bottom: 56px;
@@ -248,7 +204,6 @@ strong { font-weight: 600; }
 }
 
 
-<<<<<<< HEAD
 /* ======================================================
    HERO SECTION
 ====================================================== */
@@ -389,139 +344,6 @@ strong { font-weight: 600; }
 
 .hero-image img:hover{
     transform:scale(1.05);
-=======
-/* ================================================================
-   SECTION 1 — HERO
-   ================================================================ */
-.hero-section {
-  padding: 0;
-  overflow: hidden;
-}
-
-.hero-bg-glow {
-  position: absolute;
-  inset: 0;
-  background:
-    radial-gradient(ellipse 55% 70% at 20% 50%, rgba(196,22,58,0.10) 0%, transparent 70%),
-    radial-gradient(ellipse 35% 40% at 75% 65%, rgba(196,162,74,0.05) 0%, transparent 70%);
-  z-index: 0;
-}
-
-.hero-content {
-  position: relative;
-  z-index: 1;
-  width: 100%;
-  max-width: var(--max-w);
-  margin: 0 auto;
-  padding: 0 var(--section-px);
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  align-items: center;
-  gap: 70px;
-  min-height: 100vh;
-}
-
-/* Left: Text */
-.hero-text {
-  display: flex;
-  flex-direction: column;
-  gap: 18px;
-}
-
-.hero-label {
-  font-size: 10px;
-  font-weight: 500;
-  letter-spacing: 6px;
-  text-transform: uppercase;
-  color: var(--gold);
-}
-
-.hero-name {
-  font-family: var(--font-display);
-  font-size: clamp(3.4rem, 6.5vw, 6.8rem);
-  font-weight: 300;
-  line-height: 1.0;
-  color: var(--cream);
-}
-
-.hero-name em {
-  color: var(--crimson-light);
-}
-
-.hero-tagline {
-  font-family: var(--font-script);
-  font-size: clamp(1.5rem, 2.8vw, 2.4rem);
-  color: var(--crimson);
-  line-height: 1.45;
-}
-
-.hero-sub {
-  font-size: 0.9rem;
-  color: var(--cream-dim);
-  letter-spacing: 0.3px;
-}
-
-.hero-cta {
-  display: inline-block;
-  margin-top: 10px;
-  padding: 12px 30px;
-  border: 1px solid var(--crimson-mid);
-  font-family: var(--font-body);
-  font-size: 10px;
-  font-weight: 500;
-  letter-spacing: 4px;
-  text-transform: uppercase;
-  color: var(--cream);
-  width: fit-content;
-  transition: background 0.4s, border-color 0.4s, letter-spacing 0.4s;
-}
-
-.hero-cta:hover {
-  background: var(--crimson-mid);
-  border-color: var(--crimson);
-  letter-spacing: 5px;
-}
-
-/* Right: Photo */
-.hero-photo-wrap {
-  position: relative;
-  display: flex;
-  justify-content: center;
-}
-
-.hero-photo-frame {
-  position: relative;
-  width: 100%;
-  max-width: 390px;
-  aspect-ratio: 3 / 4;
-  overflow: hidden;
-  border: 1px solid var(--crimson-mid);
-}
-
-.hero-photo-img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  object-position: center top;
-  transition: transform 0.7s ease;
-}
-
-.hero-photo-frame:hover .hero-photo-img {
-  transform: scale(1.05);
-}
-
-/* Decorative offset shadow frame */
-.hero-frame-shadow {
-  position: absolute;
-  width: calc(100% - 20px);
-  max-width: 390px;
-  aspect-ratio: 3 / 4;
-  top: 18px;
-  left: calc(50% - 195px + 10px);
-  border: 1px solid var(--gold-dim);
-  z-index: -1;
-  pointer-events: none;
->>>>>>> c06ba400569f6168e164145d34132d3e037cbd8d
 }
 
 /* Scroll line indicator */
@@ -547,135 +369,11 @@ strong { font-weight: 600; }
   50%       { opacity: 1;    transform: scaleY(1.2);  }
 }
 
-<<<<<<< HEAD
 /* ================================================================
    SECTION 3 — BIRTHDAY WISH LETTER
    ================================================================ */
 .wish-section {
   background: #090909;
-=======
-
-/* ================================================================
-   SECTION 2 — TOGETHER COUNTER
-   ================================================================ */
-.together-section {
-  background: linear-gradient(180deg, var(--bg-dark) 0%, var(--bg-deep) 100%);
-}
-
-.together-inner {
-  width: 100%;
-  max-width: 860px;
-  text-align: center;
-}
-
-.stats-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 16px;
-  margin: 48px 0;
-}
-
-.stat-card {
-  background: var(--bg-card);
-  border: 1px solid rgba(196,22,58,0.18);
-  padding: 38px 16px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 10px;
-  transition: border-color 0.35s, background 0.35s;
-}
-
-.stat-card:hover {
-  border-color: var(--crimson);
-  background: var(--bg-card-hover);
-}
-
-.stat-card--main {
-  border-color: var(--crimson-mid);
-  background: linear-gradient(150deg, var(--bg-card), #1a0d12);
-}
-
-.stat-number,
-.stat-symbol {
-  font-family: var(--font-display);
-  font-size: clamp(2.4rem, 4.5vw, 3.8rem);
-  font-weight: 300;
-  color: var(--crimson-light);
-  line-height: 1;
-}
-
-.stat-label {
-  font-size: 9px;
-  font-weight: 500;
-  letter-spacing: 3px;
-  text-transform: uppercase;
-  color: var(--cream-dim);
-}
-
-.together-dates {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-wrap: wrap;
-  gap: 32px;
-  margin-top: 40px;
-}
-
-.date-entry {
-  display: flex;
-  align-items: center;
-  gap: 14px;
-}
-
-.date-diamond {
-  color: var(--crimson);
-  font-size: 0.7rem;
-}
-
-.date-label {
-  font-size: 9px;
-  letter-spacing: 3px;
-  text-transform: uppercase;
-  color: var(--cream-dim);
-  margin-bottom: 4px;
-}
-
-.date-value {
-  font-family: var(--font-display);
-  font-size: 1.35rem;
-  font-weight: 300;
-  color: var(--cream);
-}
-
-.date-line-deco {
-  font-size: 1.4rem;
-  color: var(--crimson-mid);
-  letter-spacing: 6px;
-}
-
-
-/* ================================================================
-   SECTION 3 — BIRTHDAY WISH / LETTER
-   ================================================================ */
-.wish-section {
-  background: var(--bg-deep);
-}
-
-/* Big faint heart behind the letter */
-.wish-section::before {
-  content: '♥';
-  position: absolute;
-  font-size: clamp(20vw, 35vw, 400px);
-  color: rgba(196,22,58,0.03);
-  left: 50%;
-  top: 50%;
-  transform: translate(-50%, -50%);
-  pointer-events: none;
-  font-family: serif;
-  line-height: 1;
-  z-index: 0;
->>>>>>> c06ba400569f6168e164145d34132d3e037cbd8d
 }
 
 .wish-inner {
@@ -687,11 +385,7 @@ strong { font-weight: 600; }
 
 .letter-paper {
   background: #0f090d;
-<<<<<<< HEAD
   border: 2px solid #E6395C;
-=======
-  border: 1px solid rgba(196,22,58,0.22);
->>>>>>> c06ba400569f6168e164145d34132d3e037cbd8d
   padding: clamp(30px, 5vw, 64px);
   position: relative;
 }
@@ -702,88 +396,41 @@ strong { font-weight: 600; }
   position: absolute;
   top: 10px; left: 10px;
   right: -10px; bottom: -10px;
-<<<<<<< HEAD
   border: 2px solid #D4AF37;
-=======
-  border: 1px solid rgba(196,162,74,0.12);
->>>>>>> c06ba400569f6168e164145d34132d3e037cbd8d
   z-index: -1;
   pointer-events: none;
 }
 
-<<<<<<< HEAD
 .letter-salutation {
   font-family: var(--font-script);
   font-size: clamp(2rem, 4vw, 3rem);
   color: #E6395C;
-=======
-.letter-date-stamp {
-  font-size: 10px;
-  letter-spacing: 4px;
-  text-transform: uppercase;
-  color: var(--gold);
-  margin-bottom: 28px;
-}
-
-.letter-salutation {
-  font-family: var(--font-script);
-  font-size: clamp(2rem, 4vw, 3rem);
-  color: var(--crimson-light);
->>>>>>> c06ba400569f6168e164145d34132d3e037cbd8d
   margin-bottom: 28px;
   line-height: 1.2;
 }
 
 .letter-body {
   font-family: var(--font-display);
-<<<<<<< HEAD
   font-size: 1.2rem;
   font-weight: 350;
   font-style: italic;
   color: #D4AF37;
-=======
-  font-size: 1.1rem;
-  font-weight: 300;
-  font-style: italic;
-  color: var(--cream-dim);
->>>>>>> c06ba400569f6168e164145d34132d3e037cbd8d
   line-height: 2.1;
   margin-bottom: 22px;
 }
 
-<<<<<<< HEAD
 .letter-signature {
   font-family: var(--font-script);
   font-size: clamp(1.8rem, 3vw, 2.4rem);
   color: #E6395C;
 }
 
-=======
-.letter-closing {
-  font-size: 0.85rem;
-  color: var(--cream-dim);
-  margin-top: 38px;
-  margin-bottom: 6px;
-}
-
-.letter-signature {
-  font-family: var(--font-script);
-  font-size: clamp(1.8rem, 3vw, 2.4rem);
-  color: var(--crimson);
-}
-
-
->>>>>>> c06ba400569f6168e164145d34132d3e037cbd8d
 /* ================================================================
    SECTION 4 — OUR JOURNEY / TIMELINE
    ================================================================ */
 .journey-section {
   min-height: auto;
-<<<<<<< HEAD
   background: #090909;
-=======
-  background: linear-gradient(180deg, var(--bg-deep) 0%, var(--bg-dark) 100%);
->>>>>>> c06ba400569f6168e164145d34132d3e037cbd8d
 }
 
 .journey-inner {
@@ -841,24 +488,16 @@ strong { font-weight: 600; }
 
 /* LEFT items: card goes in left column */
 .timeline-item[data-side="left"] .timeline-card {
-<<<<<<< HEAD
   width: 340px;
   grid-column: 1;
   grid-row: 1;
   margin-left: auto;
-=======
-  grid-column: 1;
-  grid-row: 1;
->>>>>>> c06ba400569f6168e164145d34132d3e037cbd8d
   margin-right: 56px;
 }
 
 /* RIGHT items: card goes in right column */
 .timeline-item[data-side="right"] .timeline-card {
-<<<<<<< HEAD
   width: 340px;
-=======
->>>>>>> c06ba400569f6168e164145d34132d3e037cbd8d
   grid-column: 2;
   grid-row: 1;
   margin-left: 56px;
@@ -880,11 +519,7 @@ strong { font-weight: 600; }
 /* Photo */
 .tl-photo {
   width: 100%;
-<<<<<<< HEAD
   aspect-ratio: 3 / 3.5;
-=======
-  aspect-ratio: 16 / 9;
->>>>>>> c06ba400569f6168e164145d34132d3e037cbd8d
   overflow: hidden;
   position: relative;
   background: var(--bg-dark);
@@ -913,13 +548,9 @@ strong { font-weight: 600; }
 }
 
 .tl-date {
-<<<<<<< HEAD
   font-family: var(--font-body);
   font-size: 10px;
   font-weight: 600;
-=======
-  font-size: 9px;
->>>>>>> c06ba400569f6168e164145d34132d3e037cbd8d
   letter-spacing: 3px;
   text-transform: uppercase;
   color: var(--crimson);
@@ -931,21 +562,13 @@ strong { font-weight: 600; }
   font-family: var(--font-display);
   font-size: 1.35rem;
   font-weight: 400;
-<<<<<<< HEAD
   color: #D4AF37;
-=======
-  color: var(--cream);
->>>>>>> c06ba400569f6168e164145d34132d3e037cbd8d
   margin-bottom: 8px;
 }
 
 .tl-desc {
   font-size: 0.87rem;
-<<<<<<< HEAD
   color: var(--cream);
-=======
-  color: var(--cream-dim);
->>>>>>> c06ba400569f6168e164145d34132d3e037cbd8d
   line-height: 1.7;
 }
 
@@ -954,11 +577,7 @@ strong { font-weight: 600; }
    SECTION 5 — POEM
    ================================================================ */
 .poem-section {
-<<<<<<< HEAD
   background: #090909;
-=======
-  background: var(--bg-deep);
->>>>>>> c06ba400569f6168e164145d34132d3e037cbd8d
   overflow: hidden;
 }
 
@@ -993,13 +612,9 @@ strong { font-weight: 600; }
           mask-image: linear-gradient(to bottom, transparent 0%, black 8%, black 92%, transparent 100%);
 }
 
-<<<<<<< HEAD
 .poem-body{
     font-family:'Hind Siliguri',sans-serif;
 }
-=======
-.poem-body { text-align: center; }
->>>>>>> c06ba400569f6168e164145d34132d3e037cbd8d
 
 .poem-line {
   font-family: var(--font-bengali);
@@ -1017,11 +632,7 @@ strong { font-weight: 600; }
    SECTION 6 — PLAYLIST
    ================================================================ */
 .playlist-section {
-<<<<<<< HEAD
   background: #090909;
-=======
-  background: linear-gradient(180deg, var(--bg-dark) 0%, var(--bg-deep) 100%);
->>>>>>> c06ba400569f6168e164145d34132d3e037cbd8d
   text-align: center;
 }
 
@@ -1046,8 +657,6 @@ strong { font-weight: 600; }
   border: none;
 }
 
-<<<<<<< HEAD
-=======
 .playlist-note {
   font-family: var(--font-display);
   font-style: italic;
@@ -1056,17 +665,12 @@ strong { font-weight: 600; }
 }
 
 
->>>>>>> c06ba400569f6168e164145d34132d3e037cbd8d
 /* ================================================================
    SECTION 7 — FRIEND WISHES
    ================================================================ */
 .wishes-section {
   min-height: auto;
-<<<<<<< HEAD
   background: #090909;
-=======
-  background: var(--bg-deep);
->>>>>>> c06ba400569f6168e164145d34132d3e037cbd8d
 }
 
 .wishes-inner {
@@ -1195,11 +799,7 @@ strong { font-weight: 600; }
    FOOTER
    ================================================================ */
 .site-footer {
-<<<<<<< HEAD
-  background: #090909;
-=======
   background: var(--bg-dark);
->>>>>>> c06ba400569f6168e164145d34132d3e037cbd8d
   border-top: 1px solid rgba(196,22,58,0.12);
   padding: clamp(60px, 8vw, 100px) var(--section-px);
   text-align: center;

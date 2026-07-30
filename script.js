@@ -7,7 +7,6 @@
 /* ────────────────────────────────────────────────────────────────
    1. FLOATING ROSE PETALS
    ──────────────────────────────────────────────────────────────── */
-<<<<<<< HEAD
 // (function createPetals() {
 //   const container = document.querySelector('.petals-container');
 //   if (!container) return;
@@ -35,35 +34,6 @@
 //     container.appendChild(petal);
 //   }
 // })();
-=======
-(function createPetals() {
-  const container = document.querySelector('.petals-container');
-  if (!container) return;
-
-  const PETAL_COUNT = 20;
-
-  for (let i = 0; i < PETAL_COUNT; i++) {
-    const petal      = document.createElement('div');
-    petal.className  = 'petal';
-
-    const size        = Math.random() * 9 + 5;          // 5–14px
-    const duration    = Math.random() * 12 + 9;          // 9–21s
-    const delay       = Math.random() * 20;              // staggered start
-    const leftPct     = Math.random() * 100;             // random horizontal
-
-    petal.style.cssText = `
-      width: ${size}px;
-      height: ${size}px;
-      left: ${leftPct}vw;
-      animation-duration: ${duration}s;
-      animation-delay: ${delay}s;
-      opacity: ${(Math.random() * 0.45 + 0.2).toFixed(2)};
-    `;
-
-    container.appendChild(petal);
-  }
-})();
->>>>>>> c06ba400569f6168e164145d34132d3e037cbd8d
 
 
 /* ────────────────────────────────────────────────────────────────
@@ -208,39 +178,3 @@ document.querySelectorAll('.tl-photo img, .hero-photo-img').forEach(img => {
     });
   }
 });
-<<<<<<< HEAD
-
-/* ==========================================
-   LIVE COUNTDOWN
-========================================== */
-
-const birthday = new Date("August 20, 2026 00:00:00").getTime();
-
-function updateCountdown(){
-
-    const now = new Date().getTime();
-
-    const distance = birthday - now;
-
-    if(distance < 0) return;
-
-    const days = Math.floor(distance/(1000*60*60*24));
-
-    const hours = Math.floor((distance%(1000*60*60*24))/(1000*60*60));
-
-    const minutes = Math.floor((distance%(1000*60*60))/(1000*60));
-
-    const seconds = Math.floor((distance%(1000*60))/1000);
-
-    document.getElementById("days").textContent = days;
-    document.getElementById("hours").textContent = hours;
-    document.getElementById("minutes").textContent = minutes;
-    document.getElementById("seconds").textContent = seconds;
-
-}
-
-updateCountdown();
-
-setInterval(updateCountdown,1000);
-=======
->>>>>>> c06ba400569f6168e164145d34132d3e037cbd8d
