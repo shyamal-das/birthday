@@ -30,7 +30,7 @@
 
   /* Layout */
   --max-w:      1140px;
-  --section-py: clamp(80px, 10vw, 120px);
+  --section-py: clamp(25px, 3vw, 40px);
   --section-px: clamp(20px, 5vw, 60px);
 }
 
@@ -283,7 +283,7 @@ strong { font-weight: 600; }
 .hero-title{
     font-family:'Great Vibes',cursive;
     color:#EE0943;
-    font-size:80px;
+    font-size:58px;
     font-weight:550;
     line-height:1.1;
     margin-bottom:18px;
@@ -333,7 +333,7 @@ strong { font-weight: 600; }
 }
 
 .hero-image img{
-    width:100%;
+    width:90%;
     border-radius:22px;
     border:4px solid #D4AF37;
     box-shadow:
@@ -380,7 +380,7 @@ strong { font-weight: 600; }
   position: relative;
   z-index: 1;
   width: 100%;
-  max-width: 760px;
+  max-width: 1060px;
 }
 
 .letter-paper {
@@ -405,7 +405,7 @@ strong { font-weight: 600; }
   font-family: var(--font-script);
   font-size: clamp(2rem, 4vw, 3rem);
   color: #E6395C;
-  margin-bottom: 28px;
+  margin-bottom: 20px;
   line-height: 1.2;
 }
 
@@ -416,7 +416,7 @@ strong { font-weight: 600; }
   font-style: italic;
   color: #D4AF37;
   line-height: 2.1;
-  margin-bottom: 22px;
+  margin-bottom: 20px;
 }
 
 .letter-signature {
@@ -643,12 +643,12 @@ strong { font-weight: 600; }
 }
 
 .playlist-frame {
-  width: 100%;
+  width: 80%;
   aspect-ratio: 16 / 9;
-  border: 1px solid var(--crimson-mid);
+  border: 2px solid var(--gold);
   overflow: hidden;
   background: var(--bg-card);
-  margin-bottom: 24px;
+  margin: 0 auto 20px;
 }
 
 .playlist-frame iframe {
@@ -679,14 +679,6 @@ strong { font-weight: 600; }
   text-align: center;
 }
 
-.flip-instruction {
-  font-size: 0.8rem;
-  color: var(--cream-dim);
-  letter-spacing: 1px;
-  margin-top: -36px;
-  margin-bottom: 40px;
-}
-
 /* ── GRID ── */
 .wishes-grid {
   display: grid;
@@ -715,7 +707,21 @@ strong { font-weight: 600; }
   transform: rotateY(180deg);
 }
 
-.wish-front,
+.wish-front {
+  position: absolute;
+  inset: 0;
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  padding: 24px;
+  border: 2px solid rgba(196,22,58,0.18);
+  background: var(--bg-card);
+}
+
 .wish-back {
   position: absolute;
   inset: 0;
@@ -727,7 +733,7 @@ strong { font-weight: 600; }
   justify-content: center;
   gap: 12px;
   padding: 24px;
-  border: 1px solid rgba(196,22,58,0.18);
+  border: 2px solid #c4163a;
   background: var(--bg-card);
 }
 
@@ -739,10 +745,10 @@ strong { font-weight: 600; }
 
 /* Friend avatar */
 .friend-avatar {
-  width: 78px; height: 78px;
+  width: 100px; height: 100px;
   border-radius: 50%;
   overflow: hidden;
-  border: 2px solid var(--crimson-mid);
+  border: 2.5px solid var(--gold-dim);
   position: relative;
   background: var(--bg-dark);
   flex-shrink: 0;
@@ -764,15 +770,17 @@ strong { font-weight: 600; }
 
 .friend-name {
   font-family: var(--font-display);
+  color: #D4AF37;
   font-size: 1.1rem;
-  font-weight: 400;
-  color: var(--cream);
+  font-weight: 550;
+  letter-spacing: 1px;
   text-align: center;
 }
 
 .flip-hint {
   font-size: 9px;
   letter-spacing: 2px;
+  font-weight: 500;
   text-transform: uppercase;
   color: var(--crimson);
 }
@@ -792,51 +800,47 @@ strong { font-weight: 600; }
   text-transform: uppercase;
   color: var(--crimson);
   margin-top: 4px;
+  font-weight: 600;
 }
 
 
 /* ================================================================
    FOOTER
    ================================================================ */
-.site-footer {
-  background: var(--bg-dark);
-  border-top: 1px solid rgba(196,22,58,0.12);
-  padding: clamp(60px, 8vw, 100px) var(--section-px);
-  text-align: center;
+.footer{
+    background:#090909;
+    padding:70px 20px 40px;
+    text-align:center;
 }
 
-.footer-inner {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 14px;
+.footer-story{
+    font-family:'Cormorant Garamond',serif;
+    font-size:2rem;
+    font-style:italic;
+    color:#D4AF37;
+    margin-bottom:-20px;
 }
 
-.footer-quote {
-  font-family: var(--font-script);
-  font-size: clamp(2.4rem, 4.5vw, 4rem);
-  color: var(--crimson);
+.footer-divider{
+    color:#C4163A;
+    font-size:5rem;
+    margin-bottom:-20px;
 }
 
-.footer-hearts {
-  font-size: 1.2rem;
-  letter-spacing: 12px;
-  color: var(--crimson-mid);
+.footer-credit{
+  font-family:'Cormorant Garamond',serif;
+  color:#C4163A;
+  font-size:1.5rem;
+  font-style:italic;
+  letter-spacing:1px;
 }
 
-.footer-date {
-  font-size: 9px;
-  letter-spacing: 5px;
-  text-transform: uppercase;
-  color: var(--cream-dim);
+.footer-credit span{
+  font-family:'Cormorant Garamond',serif;
+  font-style:italic;
+  color:#D4AF37;
+  font-weight:700;
 }
-
-.footer-credit {
-  font-size: 0.8rem;
-  color: rgba(154, 138, 126, 0.4);
-  margin-top: 8px;
-}
-
 
 /* ================================================================
    RESPONSIVE — TABLET (≤ 860px)
