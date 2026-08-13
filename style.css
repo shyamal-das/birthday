@@ -809,6 +809,70 @@ strong { font-weight: 600; }
 }
 
 
+
+
+
+
+
+/* Keep the wish card fixed */
+.wish-card {
+  overflow: hidden;
+}
+
+/* Keep the message area scrollable */
+.wish-back {
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Scroll only the actual message */
+.friend-wish {
+  max-height: 180px;
+  overflow-y: auto;
+  padding-right: 10px;
+  text-align: center;
+}
+
+/* Optional: make the scrollbar subtle */
+.friend-wish::-webkit-scrollbar {
+  width: 5px;
+}
+
+.friend-wish::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.friend-wish::-webkit-scrollbar-thumb {
+  background: rgba(16, 30, 54, 0.35);
+  border-radius: 10px;
+}
+
+/* Firefox */
+.friend-wish {
+  scrollbar-width: thin;
+  scrollbar-color: rgba(16, 30, 54, 0.35) transparent;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 /* ================================================================
    FOOTER
    ================================================================ */
