@@ -669,7 +669,6 @@ strong { font-weight: 600; }
   color: var(--cream-dim);
 }
 
-
 /* ================================================================
    SECTION 7 — FRIEND WISHES
    ================================================================ */
@@ -808,12 +807,6 @@ strong { font-weight: 600; }
   font-weight: 600;
 }
 
-
-
-
-
-
-
 /* Keep the wish card fixed */
 .wish-card {
   overflow: hidden;
@@ -853,25 +846,6 @@ strong { font-weight: 600; }
   scrollbar-width: thin;
   scrollbar-color: rgba(16, 30, 54, 0.35) transparent;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 /* ================================================================
    FOOTER
